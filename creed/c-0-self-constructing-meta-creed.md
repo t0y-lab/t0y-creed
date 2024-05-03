@@ -12,7 +12,7 @@
 
 ## Abstract
 
-Creed No.0 (C-0) serves as the foundational framework for all subsequent creeds within the t0y ecosystem. Designed to be self-constructing and self-evolving, it sets the initial rules and provides mechanisms for its own modification and evolution through community-driven proposals and on-chain governance. As the inaugural creed, it embodies our ethos to empower and engage every stakeholder in the t0y ecosystem.
+Creed No.0 (C-0) serves as the foundational framework for all subsequent Creeds within the t0y ecosystem. Designed to be self-constructing and self-evolving, it sets the initial rules and provides mechanisms for its own modification and evolution through community-driven proposals and on-chain governance. As the inaugural Creed, it embodies our ethos to empower and engage every stakeholder in the t0y ecosystem.
 
 ## Rationale
 
@@ -22,21 +22,21 @@ The rationale behind C-0 is rooted in the need for a flexible, adaptive governan
 
 ### Creed Syntax
 
-The structure for writing a creed is standardized to ensure consistency across the t0y.life ecosystem. Each creed document is carefully formatted to follow specific naming and content guidelines.
+The structure for writing a Creed is standardized to ensure consistency across the t0y.life ecosystem. Each Creed document is carefully formatted to follow specific naming and content guidelines.
 
 **File Naming**
 
-Creed files are named using the pattern `c-x-y.md`, where `X` represents the creed index and `Y` the title of the creed. The entire filename should be in lowercase to maintain uniformity. Titles should use Pascal Case, which means using hyphens (`-`) to replace spaces between words.
+Creed files are named using the pattern `c-x-y.md`, where `X` represents the Creed index and `Y` the title of the Creed. The entire filename should be in lowercase to maintain uniformity. Titles should use Pascal Case, which means using hyphens (`-`) to replace spaces between words.
 
 **Document Header**
 
-Every creed document starts with a specific header format, `📄 # C-X Y`. Here, `X` is the index of the creed, and `Y` is the title, reflecting the specific focus of the creed.
+Every Creed document starts with a specific header format, `📄 # C-X Y`. Here, `X` is the index of the Creed, and `Y` is the title, reflecting the specific focus of the Creed.
 
 **Content Sections**
 
-The content of each creed must include, but is not limited to, the following sections:
+The content of each Creed must include, but is not limited to, the following sections:
 
-* A state table (refer to the beginning of this creed)
+* A state table (refer to the beginning of this Creed)
 * `## Abstract`
 * `## Rationale`
 * `## Copyright`
@@ -49,10 +49,10 @@ Titles for each section should be in Title Case, where the first letter of each 
 
 ### Self-Constructing Nature
 
-C-0 is a meta-creed—a creed about creeds. It establishes fundamental principles and processes for proposing, reviewing, and implementing all other creeds. Key features include:
+C-0 is a Meta-Creed—a Creed about Creeds. It establishes fundamental principles and processes for proposing, reviewing, and implementing all other Creeds. Key features include:
 
-* **Self-reference**: C-0 defines and continually redefines itself, setting a precedent for how creeds interact and influence each other.
-* **Iterative Evolution**: Creeds, including C-0, can be modified by subsequent creeds, ensuring the governance model adapts to the community's evolving needs.
+* **Self-reference**: C-0 defines and continually redefines itself, setting a precedent for how Creeds interact and influence each other.
+* **Iterative Evolution**: Creeds, including C-0, can be modified by subsequent Creeds, ensuring the governance model adapts to the community's evolving needs.
 
 ### Example of Operation
 
@@ -71,7 +71,7 @@ This expression signifies that C-1 is derived from applying a new proposal to C-
 
 ### Community-Driven and On-Chain Governance
 
-* **Community Input**: Every member of the t0y community can contribute to the discussion and modification of creeds, including C-0, ensuring the platform evolves to reflect diverse perspectives.
+* **Community Input**: Every member of the t0y community can contribute to the discussion and modification of Creeds, including C-0, ensuring the platform evolves to reflect diverse perspectives.
 * **On-Chain Implementation**: Approved proposals are implemented on-chain, ensuring transparency, security, and the immutability of changes.
 
 ### Modifying C-0
@@ -79,7 +79,7 @@ This expression signifies that C-1 is derived from applying a new proposal to C-
 Due to its foundational nature, modifications to C-0 can significantly impact the entire t0y ecosystem:
 
 * **Proposal for Modification**: Any community member can submit a proposal to modify C-0, which is then reviewed and discussed following established processes.
-* **Potential for Comprehensive Changes**: Approved modifications to C-0 could alter the fundamental governance and operational structures of future creeds.
+* **Potential for Comprehensive Changes**: Approved modifications to C-0 could alter the fundamental governance and operational structures of future Creeds.
 
 ## **Copyright**
 
