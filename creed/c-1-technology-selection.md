@@ -2,7 +2,7 @@
 
 |                   |                                                                   |
 | ----------------- | ----------------------------------------------------------------- |
-| **Authors**       | [Xavier Lau (@AurevoirXavier)](https://github.com/AurevoirXavier) |
+| **Authors**       | Xavier Lau ([@AurevoirXavier](https://github.com/AurevoirXavier)) |
 | **Created**       | 2024-05-03                                                        |
 | **Discussion**    | None                                                              |
 | **Status**        | Draft / Proposed / Accepted ✓ / Implemented                       |
