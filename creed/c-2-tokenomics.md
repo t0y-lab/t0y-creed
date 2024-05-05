@@ -128,7 +128,7 @@ The mathematical function used to adjust the inflation rate of _YOKE_ based on i
 
     These functions should meet the conditions at $$x = 0$$, $$x = 0.3$$, $$x = 0.7$$ and $$x = 1$$ with a smoothing factor $$s = 0.1$$.
 
-<iframe src="https://www.desmos.com/calculator/nuuzuaqtjb?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+{% embed url="https://www.desmos.com/calculator/nuuzuaqtjb?embed" %}
 
 #### _**ZEST**_** Inflation Adjustment Function**
 
@@ -164,8 +164,8 @@ The relationship between the destruction rate of _YOKE_ and the inflation rate o
 
     This function should meet the conditions at $$x = 0$$ and $$x = 1$$.
 
-<iframe src="https://www.desmos.com/calculator/u85raxlyzc?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-<iframe src="https://www.desmos.com/calculator/nxtydl7ouj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+{% embed url="https://www.desmos.com/calculator/u85raxlyzc?embed" %}
+{% embed url="https://www.desmos.com/calculator/nxtydl7ouj?embed" %}
 
 ## **Copyright**
 
