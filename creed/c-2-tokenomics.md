@@ -47,6 +47,8 @@ The dual-token system with dynamic inflation is designed to incentivize user eng
 
 ### **Mathematical Derivations and Function Graphs**
 
+The approximations involved in the following functions will retain two decimal places, and ultimately, percentages will be directly rounded to the nearest whole number in the engineering application.
+
 #### _**YOKE**_** Inflation Adjustment Function**
 
 The mathematical function used to adjust the inflation rate of _YOKE_ based on its destruction rate is detailed here. This includes the use of the Hyperbolic Tangent function to model the inflation curve dynamically.
@@ -120,11 +122,13 @@ The mathematical function used to adjust the inflation rate of _YOKE_ based on i
     I(x) = 0.0625 - 0.0414 \tanh\left(\frac{x - 0.85}{0.1}\right)
     $$
 
-    These functions should meet the conditions at $$x = 0$$, $$x = 0.3$$, $$x = 0.7$$ and $$x = 1$$ with a smoothing factor $$s = 0.1$$.
-
     $$
     I(x) = \begin{cases} 0.15 - 0.0552 \tanh\left(\frac{x - 0.15}{0.1}\right) & \text{for } 0 \leq x \leq 0.3, \\ 0.1 & \text{for } 0.3 < x < 0.7, \\ 0.0625 - 0.0414 \tanh\left(\frac{x - 0.85}{0.1}\right) & \text{for } 0.7 \leq x \leq 1 \end{cases}
     $$
+
+    These functions should meet the conditions at $$x = 0$$, $$x = 0.3$$, $$x = 0.7$$ and $$x = 1$$ with a smoothing factor $$s = 0.1$$.
+
+<iframe src="https://www.desmos.com/calculator/nuuzuaqtjb?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 #### _**ZEST**_** Inflation Adjustment Function**
 
@@ -159,6 +163,9 @@ The relationship between the destruction rate of _YOKE_ and the inflation rate o
     $$
 
     This function should meet the conditions at $$x = 0$$ and $$x = 1$$.
+
+<iframe src="https://www.desmos.com/calculator/u85raxlyzc?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/nxtydl7ouj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 ## **Copyright**
 
