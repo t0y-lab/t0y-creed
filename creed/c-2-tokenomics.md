@@ -1,16 +1,6 @@
 # 📄 C-2 Tokenomics
 
-|                   |                                                                   |
-| ----------------- | ----------------------------------------------------------------- |
-| **Authors**       | Xavier Lau ([@AurevoirXavier](https://github.com/AurevoirXavier)) |
-| **Created**       | 2024-05-04                                                        |
-| **Discussion**    | None                                                              |
-| **Status**        | Draft / Proposed / Accepted ✓ / Implemented                       |
-| **Requires**      | None                                                              |
-| **Replaces**      | None                                                              |
-| **Superseded By** | None                                                              |
-
-## Abstract
+Abstract
 
 This proposal outlines a dynamic inflation model for two native tokens in the t0y ecosystem: _YOKE_ and _ZEST_. _YOKE_ serves as the primary token for transaction fees and regular operations, while _ZEST_ is utilized for governance and value storage. The initial supply is set at **1 billion** for _YOKE_ and **1 million** for _ZEST_, with both tokens starting with an inflation rate of `10%`. The inflation rates of both tokens are adjusted dynamically based on the destruction rate of _YOKE_, promoting a balanced and sustainable economic environment.
 
@@ -49,7 +39,7 @@ The dual-token system with dynamic inflation is designed to incentivize user eng
 
 The approximations involved in the following functions will retain two decimal places, and ultimately, percentages will be directly rounded to the nearest whole number in the engineering application.
 
-#### _**YOKE**_** Inflation Adjustment Function**
+#### _**YOKE**_ Inflation Adjustment Function
 
 The mathematical function used to adjust the inflation rate of _YOKE_ based on its destruction rate is detailed here. This includes the use of the Hyperbolic Tangent function to model the inflation curve dynamically.
 
@@ -65,11 +55,9 @@ The mathematical function used to adjust the inflation rate of _YOKE_ based on i
 *   Conditions
 
     $$
-    \begin{cases} I(0.3) = 0.1\\ I(0) = 0.2 \end{cases}\\
-    \text{and}\\
-    \begin{cases} I(0.7) = 0.1\\ I(1) = 0.025 \end{cases}
+    \begin{cases} I(0.3) = 0.1\\ I(0) = 0.2 \end{cases}\\ \text{and}\\ \begin{cases} I(0.7) = 0.1\\ I(1) = 0.025 \end{cases}
     $$
-*   Solving the Equations&#x20;
+*   Solving the Equations
 
     Assuming $$C_1 = 0.15$$, $$C_2 = 0.85$$ as midpoints, we calculate:
 
@@ -80,46 +68,35 @@ The mathematical function used to adjust the inflation rate of _YOKE_ based on i
     Substituting these into the equations:
 
     $$
-    \begin{cases} A - 0.905B = 0.2\\ A + 0.905B = 0.1 \end{cases}\\
-    \text{and}\\
-    \begin{cases} A - 0.905B = 0.1\\ A + 0.905B = 0.025 \end{cases}
+    \begin{cases} A - 0.905B = 0.2\\ A + 0.905B = 0.1 \end{cases}\\ \text{and}\\ \begin{cases} A - 0.905B = 0.1\\ A + 0.905B = 0.025 \end{cases}
     $$
 *   Linear Equation Solutions
 
     Addition:
 
     $$
-    A - 0.905B + A + 0.905B = 0.2 + 0.1\\
-    2A = 0.3\\
-    A = 0.15
+    A - 0.905B + A + 0.905B = 0.2 + 0.1\\ 2A = 0.3\\ A = 0.15
     $$
 
     $$
-    A - 0.905B + A + 0.905B = 0.2 + 0.1\\
-    2A = 0.125\\
-    A = 0.0625
+    A - 0.905B + A + 0.905B = 0.2 + 0.1\\ 2A = 0.125\\ A = 0.0625
     $$
 
     Subtraction:
 
     $$
-    A + 0.905B - (A - 0.905B) = 0.1 - 0.2\\
-    1.81B = -0.1\\
-    B = -\frac{0.1}{1.81} \approx -0.0552
+    A + 0.905B - (A - 0.905B) = 0.1 - 0.2\\ 1.81B = -0.1\\ B = -\frac{0.1}{1.81} \approx -0.0552
     $$
 
     $$
-    A + 0.905B - (A - 0.905B) = 0.1 - 0.2\\
-    1.81B = -0.075\\
-    B = -\frac{0.1}{1.81} \approx -0.0414
+    A + 0.905B - (A - 0.905B) = 0.1 - 0.2\\ 1.81B = -0.075\\ B = -\frac{0.1}{1.81} \approx -0.0414
     $$
 *   Final Functions
 
     Thus, the functions are:
 
     $$
-    I(x) = 0.15 - 0.0552 \tanh\left(\frac{x - 0.15}{0.1}\right)\\
-    I(x) = 0.0625 - 0.0414 \tanh\left(\frac{x - 0.85}{0.1}\right)
+    I(x) = 0.15 - 0.0552 \tanh\left(\frac{x - 0.15}{0.1}\right)\\ I(x) = 0.0625 - 0.0414 \tanh\left(\frac{x - 0.85}{0.1}\right)
     $$
 
     $$
@@ -128,9 +105,9 @@ The mathematical function used to adjust the inflation rate of _YOKE_ based on i
 
     These functions should meet the conditions at $$x = 0$$, $$x = 0.3$$, $$x = 0.7$$ and $$x = 1$$ with a smoothing factor $$s = 0.1$$.
 
-{% embed url="https://www.desmos.com/calculator/nuuzuaqtjb?embed" %}
+<figure><img src="../.gitbook/assets/y-curve.png" alt=""><figcaption><p><a href="https://www.desmos.com/calculator/0929gwdkzn">https://www.desmos.com/calculator/0929gwdkzn</a></p></figcaption></figure>
 
-#### _**ZEST**_** Inflation Adjustment Function**
+#### _**ZEST**_ Inflation Adjustment Function
 
 The relationship between the destruction rate of _YOKE_ and the inflation rate of _ZEST_ is modeled using a Sigmoid function.
 
@@ -164,8 +141,9 @@ The relationship between the destruction rate of _YOKE_ and the inflation rate o
 
     This function should meet the conditions at $$x = 0$$ and $$x = 1$$.
 
-{% embed url="https://www.desmos.com/calculator/u85raxlyzc?embed" %}
-{% embed url="https://www.desmos.com/calculator/nxtydl7ouj?embed" %}
+<figure><img src="../.gitbook/assets/yz-curve.png" alt=""><figcaption><p><a href="https://www.desmos.com/calculator/9jlvxz285q">https://www.desmos.com/calculator/9jlvxz285q</a></p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/z-curve.png" alt=""><figcaption><p><a href="https://www.desmos.com/calculator/qch9581rje">https://www.desmos.com/calculator/qch9581rje</a></p></figcaption></figure>
 
 ## **Copyright**
 
